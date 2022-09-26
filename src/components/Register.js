@@ -8,10 +8,10 @@ export const Register = () => {
   const inputEmail = document.createElement('input');
   const inputPass = document.createElement('input');
 
-  inputEmail.placeholder = 'E-mail';
-  inputPass.placeholder = 'Password';
+  inputEmail.placeholder = '   E-mail';
+  inputPass.placeholder = '   Password';
   button.textContent = 'Crear cuenta';
-  buttonBack.textContent = 'Regresa';
+  buttonBack.textContent = 'Regresar';
   title.textContent = 'Registro de nueva cuenta';
 
   button.addEventListener('click', () => {

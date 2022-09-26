@@ -8,10 +8,10 @@ export const Login = () => {
   const inputEmail = document.createElement('input');
   const inputPass = document.createElement('input');
 
-  inputEmail.placeholder = 'E-mail';
-  inputPass.placeholder = 'Password';
+  inputEmail.placeholder = '   E-mail';
+  inputPass.placeholder = '   Password';
   button.textContent = 'Entrar';
-  buttonBack.textContent = 'Regresa';
+  buttonBack.textContent = 'Regresar';
   title.textContent = 'Inicia sesión';
 
   button.addEventListener('click', () => {
