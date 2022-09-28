@@ -28,5 +28,5 @@
     "jest/prefer-to-have-length": "warn",
     "jest/valid-expect": "error",
     "import/no-cycle":"off"
-  }
+   }
 }

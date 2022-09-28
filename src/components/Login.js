@@ -3,20 +3,23 @@ import { onNavigate } from '../main.js';
 export const Login = () => {
   const div = document.createElement('div');
   const title = document.createElement('h2');
-
   const button = document.createElement('button');
   const buttonBack = document.createElement('button');
-
   const inputEmail = document.createElement('input');
   const inputPass = document.createElement('input');
-
+  
+  inputEmail.placeholder = 'E-mail';
+  inputPass.placeholder = 'Password';
+  
   button.textContent = 'LOGIN';
   buttonBack.textContent = 'Back';
   title.textContent = 'Log in';
+  
   button.addEventListener('click',()=>{
     onNavigate('/');
   });
-  buttonBack.addEventListener('click',()=>{
+  
+  buttonBack.addEventListener('click', () => {
     onNavigate('/');
   });
 
