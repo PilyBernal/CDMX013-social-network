@@ -7,26 +7,28 @@ export const Welcome = () => {
   const name = document.createElement('img');
   const buttonLogin = document.createElement('button');
   const buttonRegister = document.createElement('button');
+
+  buttonLogin.textContent = 'Log in';
+  buttonRegister.textContent = 'Register';
+  title.textContent = 'Welcome to loto the place to exchange plants and more...';
+  
   const end = document.createElement('footer');
   const content = document.createElement('div');
-
+  
   logo.setAttribute('class', 'logo');
   logo.src = '../Images/Logo.png';
   name.src = '../Images/Name.png';
-  buttonLogin.textContent = 'Iniciar sesión';
-  buttonRegister.textContent = 'Registrarse';
-  title.textContent = 'Bienvenida';
   end.textContent = 'LOTO / 2022';
+  
 
   buttonLogin.addEventListener('click', () => {
     onNavigate('/Login');
   });
-
+  
   buttonRegister.addEventListener('click', () => {
     onNavigate('/Register');
   });
 
   div.append(logo, name, title, buttonLogin, buttonRegister, end);
-
-  return (div);
+  return div;
 };

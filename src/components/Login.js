@@ -7,22 +7,22 @@ export const Login = () => {
   const buttonBack = document.createElement('button');
   const inputEmail = document.createElement('input');
   const inputPass = document.createElement('input');
-
-  inputEmail.placeholder = '   E-mail';
-  inputPass.placeholder = '   Password';
-  button.textContent = 'Entrar';
-  buttonBack.textContent = 'Regresar';
-  title.textContent = 'Inicia sesión';
-
-  button.addEventListener('click', () => {
+  
+  inputEmail.placeholder = 'E-mail';
+  inputPass.placeholder = 'Password';
+  
+  button.textContent = 'LOGIN';
+  buttonBack.textContent = 'Back';
+  title.textContent = 'Log in';
+  
+  button.addEventListener('click',()=>{
     onNavigate('/');
   });
-
+  
   buttonBack.addEventListener('click', () => {
     onNavigate('/');
   });
 
   div.append(title, inputEmail, inputPass, button, buttonBack);
-
   return div;
 };

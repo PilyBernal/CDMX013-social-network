@@ -1,3 +1,6 @@
+/* eslint-disable import/no-cycle */
+/* eslint-disable import/no-unresolved */
+
 // Este es el punto de entrada de tu aplicacion
 import { Welcome } from './components/Welcome.js';
 import { Login } from './components/Login.js';
@@ -7,8 +10,8 @@ const root = document.getElementById('root');
 
 const routes = {
   '/': Welcome,
-  '/Login': Login,
-  '/Register': Register,
+  '/login': Login,
+  '/register': Register,
 };
 
 export const onNavigate = (pathname) => {
@@ -17,13 +20,11 @@ export const onNavigate = (pathname) => {
     pathname,
     window.location.origin + pathname,
   );
-  console.log(root.firstChild);
   root.removeChild(root.firstChild);
   root.appendChild(routes[pathname]());
 };
 
 const component = routes[window.location.pathname];
-
 window.onpopstate = () => {
   root.removeChild(root.firstChild);
   root.append(component());
