@@ -2,7 +2,7 @@ import { onNavigate } from '../main.js';
 
 export const Welcome = () => {
   const div = document.createElement('div');
-  const title = document.createElement('h2');
+  const title = document.createElement('h5');
   const logo = document.createElement('img');
   const name = document.createElement('img');
   const buttonLogin = document.createElement('button');
@@ -22,11 +22,11 @@ export const Welcome = () => {
   
 
   buttonLogin.addEventListener('click', () => {
-    onNavigate('/Login');
+    onNavigate('/login');
   });
   
   buttonRegister.addEventListener('click', () => {
-    onNavigate('/Register');
+    onNavigate('/register');
   });
 
   div.append(logo, name, title, buttonLogin, buttonRegister, end);
