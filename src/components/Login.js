@@ -2,7 +2,7 @@ import { onNavigate } from '../main.js';
 
 export const Login = () => {
   const div = document.createElement('div');
-  const title = document.createElement('h2');
+  const title = document.createElement('h5');
   const button = document.createElement('button');
   const buttonBack = document.createElement('button');
   const inputEmail = document.createElement('input');
@@ -10,6 +10,8 @@ export const Login = () => {
   
   inputEmail.placeholder = 'E-mail';
   inputPass.placeholder = 'Password';
+  inputPass.type = 'password';
+  
   
   button.textContent = 'LOGIN';
   buttonBack.textContent = 'Back';

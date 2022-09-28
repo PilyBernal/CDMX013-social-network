@@ -3,7 +3,7 @@ import { newUser } from '../lib/auth.js';
 
 export const Register = () => {
   const div = document.createElement('div');
-  const title = document.createElement('h2');
+  const title = document.createElement('h5');
   const button = document.createElement('button');
   const buttonBack = document.createElement('button');
   const inputEmail = document.createElement('input');
@@ -11,6 +11,9 @@ export const Register = () => {
   
   inputEmail.placeholder = 'E-mail';
   inputPass.placeholder = 'Password';
+  inputPass.type = 'password';
+  var pwd = inputPass.value;
+  console.log(pwd)
 
   button.textContent = 'Create account';
   buttonBack.textContent = 'Back';
