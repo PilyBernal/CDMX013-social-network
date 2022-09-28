@@ -21,7 +21,6 @@ export const onNavigate = (pathname) => {
     window.location.origin + pathname,
   );
 
-  console.log(root.firstChild);
   root.removeChild(root.firstChild);
   root.appendChild(routes[pathname]());
 };
