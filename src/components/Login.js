@@ -1,30 +1,20 @@
-import { onNavigate } from '../main.js';
+import { onNavigate } from "../main.js";
 
-export const Login = () => {
-  const div = document.createElement('div');
-  const title = document.createElement('h5');
-  const button = document.createElement('button');
-  const buttonBack = document.createElement('button');
-  const inputEmail = document.createElement('input');
-  const inputPass = document.createElement('input');
-  
-  inputEmail.placeholder = 'E-mail';
-  inputPass.placeholder = 'Password';
-  inputPass.type = 'password';
-  
-  
-  button.textContent = 'LOGIN';
-  buttonBack.textContent = 'Back';
-  title.textContent = 'Log in';
-  
-  button.addEventListener('click',()=>{
-    onNavigate('/');
-  });
-  
-  buttonBack.addEventListener('click', () => {
-    onNavigate('/');
-  });
-
-  div.append(title, inputEmail, inputPass, button, buttonBack);
-  return div;
+export const Login = () =>{
+    const div = document.createElement('div');
+    const login2Loto = document.createElement('h5')
+    const mailInput = document.createElement('input');
+    const passwordInput = document.createElement('input');
+    const loginButton = document.createElement('button');
+    const returnButton = document.createElement('button');
+    login2Loto.textContent = 'Enter your credentials below to log in to Loto:'
+    mailInput.placeholder = 'Email';    
+    passwordInput.placeholder = 'Password';   
+    loginButton.textContent = 'Log in';    
+    returnButton.textContent = 'Back to homepage';
+    returnButton.addEventListener('click', () => {
+        onNavigate('/');
+    })
+    div.append(login2Loto, mailInput, passwordInput, loginButton, returnButton);
+    return div;
 };
