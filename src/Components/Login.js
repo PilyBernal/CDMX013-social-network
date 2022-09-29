@@ -2,7 +2,7 @@ import { onNavigate } from "../main.js";
 
 export const Login = () =>{
     const div = document.createElement('div');
-    const login2Loto = document.createElement('h1')
+    const login2Loto = document.createElement('h5')
     const mailInput = document.createElement('input');
     const passwordInput = document.createElement('input');
     const loginButton = document.createElement('button');
