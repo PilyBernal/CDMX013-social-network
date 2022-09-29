@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+
 *{
     background-color: #DEFFFC;
     margin: 0;
@@ -32,10 +35,28 @@ div{
    align-items: center;
 }
 
+h4{
+    color: #3f292b89;
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Cormorant Garamond';
+    font-size: 24px;
+}
+
 h5{
     color:#3f292b89;
     text-align: center;
     margin-top: 50px;
+    font-family: 'Indie Flower';
+    font-size: 18px;
+}
+
+p{
+    color:#161616;
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Cormorant Garamond';
+    font-size: 18px;
 }
 
 button{
