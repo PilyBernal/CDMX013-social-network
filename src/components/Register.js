@@ -14,16 +14,16 @@ export const Register = () => {
 
   inputEmail.placeholder = 'E-mail';
   inputPass.placeholder = 'Password';
-  //inputPass.type = 'password';
+  inputPass.type = 'password';
 
   button.textContent = 'Create account';
   buttonBack.textContent = 'Back';
   title.textContent = 'Create a Loto account';
   pwdCriteria.textContent = 'Your password must be 8-15 characters long, and contain at least one digit and special character (!@#$%^&*)'
 
-  //button.addEventListener('click', () => {
-  //  onNavigate('/');
-  //});
+  button.addEventListener('click', () => {
+    onNavigate('/home');
+  });
 
   buttonBack.addEventListener('click', () => {
     onNavigate('/');
@@ -31,6 +31,7 @@ export const Register = () => {
 
   //8 to 15 characters which contain at least one numeric digit and a special character
   button.addEventListener('click', passwordRules)
+
   function passwordRules() {
     let pwd = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,15}$/;
     let password = inputPass
