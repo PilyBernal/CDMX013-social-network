@@ -2,9 +2,10 @@
 /* eslint-disable import/no-unresolved */
 
 // Este es el punto de entrada de tu aplicacion
-import { Welcome } from './Components/Welcome.js';
-import { Login } from './Components/Login.js';
-import { Register } from './Components/Register.js';
+import { Welcome } from './components/Welcome.js';
+import { Login } from './components/Login.js';
+import { Register } from './components/Register.js';
+import { Home } from './components/Home.js';
 
 const root = document.getElementById('root');
 
@@ -12,6 +13,7 @@ const routes = {
   '/': Welcome,
   '/login': Login,
   '/register': Register,
+  '/home': Home,
 };
 
 export const onNavigate = (pathname) => {

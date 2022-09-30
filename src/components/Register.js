@@ -10,8 +10,6 @@ export const Register = () => {
   const inputPass = document.createElement('input');
   const pwdCriteria = document.createElement('p');
   
-  
-
   inputEmail.placeholder = 'E-mail';
   inputPass.placeholder = 'Password';
   inputPass.type = 'password';
