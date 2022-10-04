@@ -5,14 +5,24 @@ export function Home() {
 
   const homeContent = document.createElement('div');
   homeContent.classList.add('homeContent')
+
   const lotoBoxContainer = document.createElement('div');
   lotoBoxContainer.classList.add('lotoBoxContainer');
+
   const postAQuestion = document.createElement('label');
-  postAQuestion.classList.add('postAQuestion')
-  postAQuestion.textContent = 'Ask your botany-related question!'
-  lotoBoxContainer.append(postAQuestion)
-  const title = document.createElement('h5');
-  const title2 = document.createElement('h5');
+  postAQuestion.classList.add('postAQuestion');
+  postAQuestion.textContent = 'Ask your botany-related question!';
+
+  const postTextBox = document.createElement('textarea');
+  postTextBox.classList.add('postTextBox');
+  postTextBox.placeholder = 'Write your question here';
+
+  const submitButton = document.createElement('button');
+  submitButton.classList.add('submitButton');
+  submitButton.textContent = 'Submit Question'
+
+
+  lotoBoxContainer.append(postAQuestion, postTextBox, submitButton)
   
   homeContent.append(lotoBoxContainer);
 
