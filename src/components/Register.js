@@ -9,7 +9,7 @@ export const Register = () => {
   const inputEmail = document.createElement('input');
   const inputPass = document.createElement('input');
   const pwdCriteria = document.createElement('p');
-  
+
   inputEmail.placeholder = 'E-mail';
   inputPass.placeholder = 'Password';
   inputPass.type = 'password';
@@ -48,20 +48,20 @@ export const Register = () => {
   }
 
   button.addEventListener('click', () => {
-    newUser(inputEmail.value, inputPass.value)
-      .then((userCredential) => {
-        // Signed in
-        const user = userCredential.user;
-        // ...
-      })
+    if (passwordRules() === true) {
+      newUser(inputEmail.value, inputPass.value)
+        .then((userCredential) => {
+          // Signed in
+          const user = userCredential.user;
+          // ...
+        }).catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          // ..
+        });
+      }
+    });
 
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // ..
-      });
-  });
-
-  div.append(title, inputEmail, inputPass, pwdCriteria, button, buttonBack);
-  return div;
-};
+    div.append(title, inputEmail, inputPass, pwdCriteria, button, buttonBack);
+    return div;
+  };
