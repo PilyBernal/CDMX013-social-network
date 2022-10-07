@@ -51,13 +51,10 @@ export const Register = () => {
     if (passwordRules() === true) {
       newUser(inputEmail.value, inputPass.value)
         .then((userCredential) => {
-          // Signed in
           const user = userCredential.user;
-          // ...
         }).catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
-          // ..
         });
       }
     });

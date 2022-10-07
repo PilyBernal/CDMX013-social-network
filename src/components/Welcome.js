@@ -19,7 +19,6 @@ export const Welcome = () => {
   logo.src = '../Images/Logo.png';
   name.src = '../Images/Name.png';
   end.textContent = 'LOTO / 2022';
-  
 
   buttonLogin.addEventListener('click', () => {
     onNavigate('/login');

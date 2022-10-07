@@ -6,6 +6,7 @@ import { Welcome } from './components/Welcome.js';
 import { Login } from './components/Login.js';
 import { Register } from './components/Register.js';
 import { Home } from './components/Home.js';
+//import { } from "../firebase/firestore";
 
 const root = document.getElementById('root');
 

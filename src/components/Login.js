@@ -1,7 +1,7 @@
 import { onNavigate } from "../main.js";
 import { existingUserAccess } from '../lib/auth.js';
 
-export const Login = () =>{
+export const Login = () => {
     const div = document.createElement('div');
     const title = document.createElement('h5')
     const inputEmail = document.createElement('input');
@@ -25,12 +25,6 @@ export const Login = () =>{
         existingUserAccess(inputEmail.value, inputPass.value)
           .then((userCredential) => {
             onNavigate('/home');
-            // Signed in
-            const user = userCredential.user;
-            // ...
-            console.log(inputEmail.value);
-            console.log(inputPass.value);
-            console.log(userCredential.user);
           })
     
           .catch((error) => {
@@ -42,9 +36,6 @@ export const Login = () =>{
 
             const errorCode = error.code;
             const errorMessage = error.message;
-            // ..
-            
-
           });
       });
 

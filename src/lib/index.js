@@ -1,4 +1,4 @@
-import { initializeApp } from 'firebase/app';
+/*import { initializeApp } from 'firebase/app';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { getFirestone } from 'firebase/firestore';
 
@@ -15,10 +15,10 @@ const auth = getAuth(firebaseApp);
 const db = getFirestone(firebaseApp);
 
 onAuthStateChanged (auth, user =>{
-  if( user ≠ null){
+  if( user !== null){
     console.log ('logen in');
 
   } else{
     console.log("no user");
   }
-})
+})*/
