@@ -1,3 +1,4 @@
+//los 3 imports de abajo no están bien convocados porque no hay dependencias instaladas
 import { initializeApp } from 'firebase/app';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { getFirestone } from 'firebase/firestore';
@@ -15,8 +16,8 @@ const auth = getAuth(firebaseApp);
 const db = getFirestone(firebaseApp);
 
 onAuthStateChanged (auth, user =>{
-  if( user ≠ null){
-    console.log ('logen in');
+  if( user != null){
+    console.log ('logging in');
 
   } else{
     console.log("no user");
