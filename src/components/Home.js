@@ -24,12 +24,25 @@ export function Home() {
   submitButton.textContent = 'Submit Question';
   lotoBoxContainer.append(postAQuestion, postTextBox, submitButton);
 
-  const send = document.getElementById('post');
+  //const send = document.getElementById('post');
 
-  submitButton.addEventListener('click', async (e) => {
+  /*submitButton.addEventListener('click', async (e) => {
     e.preventDefault();
-    console.log(postTextBox.value);
-    return 'hola';
+    console.log(postTextBox.value);*/
+
+    const db = firebase.firestore();
+    const savePost = document.getElementById('post');
+    savePost.addEventListener('click', async(e) => 
+    e.preventDefault();)
+    db.collection('posts').doc().set({
+      mail: inputMail.value,
+      post: postTextBox
+    })
+ 
+    console.log(mail,post);
+
+
+    return postTextBox;
   })
 
   //postContent.append(docRef.id, inputEmail.value);
