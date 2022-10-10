@@ -24,7 +24,6 @@ div {
     padding-top: 10%;
     font-family: 'Cormorand Garamond';
     display: grid;
-    justify-content: center;
     row-gap: 30px;
 }
 
