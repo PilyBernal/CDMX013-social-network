@@ -1,5 +1,5 @@
 //los 3 imports de abajo no están bien convocados porque no hay dependencias instaladas
-import { initializeApp } from 'firebase/app';
+/*import { initializeApp } from 'firebase/app';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { getFirestone } from 'firebase/firestore';
 
@@ -22,4 +22,4 @@ onAuthStateChanged (auth, user =>{
   } else{
     console.log("no user");
   }
-})
+})*/

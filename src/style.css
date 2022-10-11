@@ -28,6 +28,9 @@ div {
 }
 
 .lotoBoxContainer {
+    position: absolute;
+    top: 40px;
+    left: 5px;
     width: 380px;
     height: 190px;
     margin: 0 auto;

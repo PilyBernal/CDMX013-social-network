@@ -3,7 +3,7 @@ import { existingUserAccess } from '../lib/auth.js';
 import { savePost } from '../lib/firestore.js';
 
 export function Home() {
-  //Generador de posts
+//Generador de posts
   const homeContent = document.createElement('div');
   homeContent.classList.add('homeContent')
 
@@ -32,25 +32,13 @@ export function Home() {
     postTextBox.value = '';
   });
 
-
-  //Contenedor de posts... meter este contenedor en en una const de función flecha, 
-  //integrar de manera dinámica la información recuperada de Firebase,
-  //'return postContainer', ir añadiendo elementos conforme se van creando posts
-/*   const postContainer = () => {
-    const div = document.createElement('div');
-    const userEmail = document.createElement('h2');
-    const postContent = document.createElement('p');
-
-    div.append(userEmail, postContent)
-
-    return div
-  } */
-
-
-
+//Contenedor de posts... meter este contenedor en en una const de función flecha, 
+//integrar de manera dinámica la información recuperada de Firebase,
+//'return postContainer', ir añadiendo elementos conforme se van creando posts
+  const postContainer = document.createElement('div');
+  postContainer.classList.add('lotoBoxContainer')
+  
   homeContent.append(lotoBoxContainer);
 
   return homeContent;
 }
-
-//revisar imports en index.js
