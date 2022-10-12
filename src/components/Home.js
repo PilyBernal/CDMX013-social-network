@@ -1,6 +1,6 @@
 import { onNavigate } from '../main.js';
 import { existingUserAccess } from '../lib/auth.js';
-import { savePost } from '../lib/firestore.js';
+import { getPost, savePost } from '../lib/firestore.js';
 
 export function Home() {
   //Generador de posts
@@ -31,6 +31,7 @@ export function Home() {
     await savePost(mail, post);
     postTextBox.value = '';
   });
+
 
 
   //Contenedor de posts... meter este contenedor en en una const de función flecha, 
