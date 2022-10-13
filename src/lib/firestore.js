@@ -1,5 +1,6 @@
 import { getFirestore, collection, addDoc, doc, onSnapshot, query } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-firestore.js";
 import { app } from '../lib/config.js'
+import { user } from '../lib/auth.js'
 
 const db = getFirestore(app);
 
@@ -10,16 +11,9 @@ export const savePost = (mail, post)=>{
     });
     }
 
-export const getPost = () => {
+export const getPost = (callback) => {
   const q = query(collection(db, 'posts'));
-  const unsubscribe = onSnapshot(q, (querySnapshot) => {
-  const posts = [];
-  querySnapshot.forEach((doc) => {
-    posts.push(doc.data().post);
-  });
-  console.log("Aquí: ", posts.join(", "));
-});
-
+  onSnapshot(q, callback);
 }
 
-getPost();
+//getPost();
