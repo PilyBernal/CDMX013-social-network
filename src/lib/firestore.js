@@ -12,14 +12,38 @@ export const savePost = (mail, post)=>{
 
 export const getPost = () => {
   const q = query(collection(db, 'posts'));
-  const unsubscribe = onSnapshot(q, (querySnapshot) => {
   const posts = [];
+  const unsubscribe = onSnapshot(q, (querySnapshot) => {
   querySnapshot.forEach((doc) => {
-    posts.push(doc.data().post);
+    posts.push(doc.data());
   });
-  console.log("Aquí: ", posts.join(", "));
 });
-
+return posts;
 }
 
 getPost();
+
+console.log(getPost());
+
+const postContainer = document.createElement('div');
+
+//postContainer = document.getElementById('postContainer');
+   /*let posts = collection(db, 'posts');
+   console.log(posts);
+   let acumuladorHTML = '';
+
+   posts.forEach(post =>{
+    show(post)
+   });
+
+   function show(post) {
+     acumuladorHTML += `<div class='postContainer'>
+     <h2>${mail}</h2> <p>${post}</p>
+     </div>`
+     postContainer.innerHTML = acumuladorHTML;
+
+     
+     div.appendChild(userEmail, postContainer);
+
+     //return div;
+   }*/

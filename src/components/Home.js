@@ -25,29 +25,32 @@ export function Home() {
 
   submitButton.addEventListener('click', async (e) => {
     //e.preventDefault();
-    const mail = 'mailDeUsuario';
+    const mail = 'Usuario';
     const post = postTextBox.value;
     
     await savePost(mail, post);
     postTextBox.value = '';
   });
 
+  const allPost = getPost();
+   allPost.map(onePost => {
+     const div = document.createElement('div');
+     const texto = document.createElement('p');
+     texto.textContent = allPost.textContent;
+     div.appendChild(texto);
+     return div;
+   })
 
+  //console.log(getPost);
 
   //Contenedor de posts... meter este contenedor en en una const de función flecha, 
   //integrar de manera dinámica la información recuperada de Firebase,
   //'return postContainer', ir añadiendo elementos conforme se van creando posts
-/*   const postContainer = () => {
-    const div = document.createElement('div');
-    const userEmail = document.createElement('h2');
-    const postContent = document.createElement('p');
-
-    div.append(userEmail, postContent)
-
-    return div
-  } */
-
-
+   //const postContainer = () => {
+   /*const postContainer = () => {
+     const div = document.createElement('div');
+     const userEmail = document.createElement('h2');
+     const postContent = document.createElement('p');*/
 
   homeContent.append(lotoBoxContainer);
 

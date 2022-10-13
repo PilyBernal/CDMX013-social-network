@@ -14,10 +14,20 @@ div {
     flex-direction: column;
 }
 
+.postContainer {
+    width: 380px;
+    height: 190px;
+    margin: 0 auto;
+    border-radius: 15px;
+    background-color: #DFD3C3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
 .homeContent {
-    top: 0;
-    left: 0;
     position: absolute;
+    bottom: 300px;
+    left: 0px;
     background-color: #DEFFFC;
     width: 100%;
     height: 100%;
