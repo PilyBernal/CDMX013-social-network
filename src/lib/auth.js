@@ -1,5 +1,5 @@
 /* eslint-disable import/no-unresolved */
-import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.9.4/firebase-auth.js';
+import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.9.4/firebase-auth.js';
 import { app } from '../lib/config.js'
 import { signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.9.4/firebase-auth.js';
 
@@ -17,6 +17,19 @@ if (user !== null) {
   // you have one. Use User.getToken() instead.
   const uid = user.uid;
 }
+
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    // User is signed in, see docs for a list of available properties
+    // https://firebase.google.com/docs/reference/js/firebase.User
+    const uid = user.uid;
+    // ...
+  } else {
+    // User is signed out
+    // ...
+  }
+});
+
 
 export const existingUserAccess = (email, password) => signInWithEmailAndPassword(auth, email, password)
 

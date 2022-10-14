@@ -25,12 +25,6 @@ export const Login = () =>{
         existingUserAccess(inputEmail.value, inputPass.value)
           .then((userCredential) => {
             onNavigate('/home');
-            // Signed in
-            const user = userCredential.user;
-            // ...
-            console.log(inputEmail.value);
-            console.log(inputPass.value);
-            console.log(userCredential.user);
           })
     
           .catch((error) => {
