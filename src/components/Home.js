@@ -35,11 +35,15 @@ const postsDisplay = document.createElement('div')
       const post = doc.data()
       console.log(post)
       const div = document.createElement('div')
-      const userEmail = document.createElement('h2')
+      div.classList.add('postContent')
+      const userEmail = document.createElement('h6')
       userEmail.textContent = post.mail
-      const postContent = document.createElement('p')
+      const postContent = document.createElement('h3')
       postContent.textContent = post.post
-      div.append(userEmail, postContent)
+      const deleteButton = document.createElement('button')
+      deleteButton.classList.add('deleteButton')
+      deleteButton.textContent = 'delete'
+      div.append(userEmail, postContent, deleteButton)
       postsDisplay.append(div)
 
       //return div
@@ -49,7 +53,7 @@ const postsDisplay = document.createElement('div')
 
   submitButton.addEventListener('click', async (e) => {
     //e.preventDefault();
-    const mail = 'user.email';
+    const mail = 'user.mail';
     const post = postTextBox.value;
     
     await savePost(mail, post);

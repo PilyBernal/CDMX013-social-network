@@ -14,6 +14,31 @@ div {
     flex-direction: column;
 }
 
+.postContent{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 320px;
+    height: 120px;
+    margin-top: 30px;
+    border-radius: 15px;
+    background-color: #DFD3C3;
+    border: 5px solid #a3d4f2;
+    font-size: 15px;
+}
+
+.deleteButton{
+    background-image: url('./Images/iconmonstr-trash-can-28-240.png');
+    background-size: cover;
+    background-color: #DFD3C3;
+    border: none;
+    width: 20px;
+    height: 20px;
+    color: transparent;
+    margin-left: 280px;
+    margin-bottom: 5px;
+}
+
 .homeContent {
     top: 0;
     left: 0;
@@ -28,13 +53,12 @@ div {
 }
 
 .lotoBoxContainer {
-    width: 380px;
+    width: 360px;
     height: 190px;
     margin: 0 auto;
     border-radius: 15px;
     background-color: #DFD3C3;
-    grid-column-start: 2;
-    grid-column-end: 3;
+    border: 5px solid #a3d4f2;
 }
 
 .postAQuestion {
@@ -52,7 +76,7 @@ div {
     padding: 5px;
     resize: none;
     height: 60px;
-    color: #292F33;
+    color: #292f3371;
     display: block;
     font-size: 13px;
     font-weight: 200;
@@ -98,12 +122,13 @@ div {
     align-items: center;
 }
 
-h4 {
-    color: #3f292b89;
+h3 {
+    background-color: #DFD3C3;
+    color: #251b1cd0;
     text-align: center;
-    margin-top: 50px;
+    margin: 10px;
     font-family: 'Cormorant Garamond';
-    font-size: 24px;
+    /*font-size: 18px;*/
 }
 
 h5 {
@@ -114,6 +139,16 @@ h5 {
     font-size: 18px;
 }
 
+h6 {
+    background-color: #DFD3C3;
+    /*border-color: #DFD3C3;*/
+    color: #251b1cd0;
+    text-align: center;
+    margin-top: 5px;
+    font-family: 'Indie Flower';
+    font-size: 12px;
+}
+
 p {
     color: #161616;
     text-align: center;
@@ -122,7 +157,7 @@ p {
     font-size: 18px;
 }
 
-button {
+.button {
     display: flex;
     justify-content: center;
     align-items: center;
