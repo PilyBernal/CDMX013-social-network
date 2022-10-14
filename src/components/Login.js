@@ -14,8 +14,10 @@ export const Login = () =>{
     inputPass.placeholder = 'Password'; 
     inputPass.type = 'password'; 
 
-    buttonLogin.textContent = 'Log in';    
+    buttonLogin.textContent = 'Log in';  
+    buttonLogin.classList.add('button');  
     buttonBack.textContent = 'Back to start';
+    buttonBack.classList.add('button');
 
     buttonBack.addEventListener('click', () => {
         onNavigate('/');

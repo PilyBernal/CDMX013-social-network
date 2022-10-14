@@ -9,7 +9,9 @@ export const Welcome = () => {
   const buttonRegister = document.createElement('button');
 
   buttonLogin.textContent = 'Log in';
+  buttonLogin.classList.add('button');
   buttonRegister.textContent = 'Register';
+  buttonRegister.classList.add('button');
   title.textContent = 'Welcome to loto the place to exchange plants and more...';
   
   const end = document.createElement('footer');
