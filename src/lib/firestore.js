@@ -1,4 +1,4 @@
-import { getFirestore, collection, addDoc, doc, onSnapshot, query } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-firestore.js";
+import { getFirestore, collection, addDoc, doc, onSnapshot, query, deleteDoc } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-firestore.js";
 import { app } from '../lib/config.js'
 import { user } from '../lib/auth.js'
 
@@ -14,6 +14,10 @@ export const savePost = (mail, post)=>{
 export const getPost = (callback) => {
   const q = query(collection(db, 'posts'));
   onSnapshot(q, callback);
+}
+
+export const deletePost = async (id) => {
+  await deleteDoc(doc(db, 'posts', id));
 }
 
 //getPost();

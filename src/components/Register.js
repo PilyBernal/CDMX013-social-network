@@ -11,11 +11,14 @@ export const Register = () => {
   const pwdCriteria = document.createElement('p');
 
   inputEmail.placeholder = 'E-mail';
+  
   inputPass.placeholder = 'Password';
   inputPass.type = 'password';
 
   button.textContent = 'Create account';
+  button.classList.add('button');
   buttonBack.textContent = 'Back';
+  buttonBack.classList.add('button');
   title.textContent = 'Create a Loto account';
   pwdCriteria.textContent = 'Your password must be 8-15 characters long, and contain at least one digit and special character (!@#$%^&*)'
 
