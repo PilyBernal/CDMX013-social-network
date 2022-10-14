@@ -5,7 +5,7 @@ import { auth, user } from '../lib/auth.js'
 
 export function Home() {
   //Generador de posts
-  const homeContent = document.createElement('div');
+  let homeContent = document.createElement('div');
   homeContent.classList.add('homeContent')
 
   const lotoBoxContainer = document.createElement('div');
@@ -29,8 +29,10 @@ export function Home() {
   //'return postContainer', ir añadiendo elementos conforme se van creando posts
 const postsDisplay = document.createElement('div')
 
+
+
   getPost((querySnapshot) =>{
-  
+  homeContent = '';
     querySnapshot.forEach((doc) => {
       const post = doc.data()
       console.log(post)
@@ -66,12 +68,13 @@ const postsDisplay = document.createElement('div')
 })
 
   submitButton.addEventListener('click', async (e) => {
-    //e.preventDefault();
+    e.preventDefault();
     const mail = 'user.mail';
     const post = postTextBox.value;
     
     await savePost(mail, post);
     postTextBox.value = '';
+    homeContent = '';
   });
 
 
