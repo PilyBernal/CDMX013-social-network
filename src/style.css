@@ -28,15 +28,23 @@ div {
 }
 
 .deleteButton {
-    background-image: url('./Images/iconmonstr-trash-can-28-240.png');
+    background-image: url('./Images//basura.png');
     background-size: cover;
     background-color: #DFD3C3;
     border: none;
     width: 20px;
     height: 20px;
     color: transparent;
-    /*margin-left: 280px;
-    margin-bottom: 5px;*/
+}
+
+.editButton {
+    background-image: url('./Images/lapiz.png');
+    background-size: cover;
+    background-color: #DFD3C3;
+    border: none;
+    width: 20px;
+    height: 20px;
+    color: transparent;
 }
 
 .postLike {
@@ -47,8 +55,6 @@ div {
     border: none;
     width: 20px;
     height: 20px;
-    /*margin-left: 280px;
-    margin-bottom: 5px;*/
     font-size: smaller;
 }
 
@@ -57,10 +63,9 @@ div {
     margin-left: 230px;
     margin-bottom: 5px;
     display: flex;
-    /*align-items: center;*/
     justify-content: space-around;
     flex-direction: row;
-    width: 50px;
+    width: 80px;
     height: 20px;
 }
 

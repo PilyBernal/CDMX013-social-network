@@ -51,11 +51,17 @@ export function Home() {
       const deleteButton = document.createElement('button')
       deleteButton.classList.add('deleteButton')
       deleteButton.textContent = '   '
+
       //Button to like the post
       const postLike = document.createElement('button');
       postLike.classList.add('postLike');
       let likesNumber = 0
       postLike.textContent = likesNumber;
+
+      const editButton = document.createElement('button');
+      editButton.classList.add('editButton');
+      editButton.textContent = '   ';
+
 
       //Event listener for deleting post
       deleteButton.addEventListener('click', async () => {
@@ -70,7 +76,7 @@ export function Home() {
         location.reload()
       })*/
 
-      iconsContent.append(postLike, deleteButton);
+      iconsContent.append(postLike, editButton, deleteButton);
 
       //Appending post content to post container box
       div.append(userEmail, postContent, iconsContent)
