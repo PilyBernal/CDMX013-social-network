@@ -1,5 +1,5 @@
 import { onNavigate } from '../main.js';
-import { newUser } from '../lib/auth.js';
+import { newUser, user } from '../lib/auth.js';
 
 export const Register = () => {
   const div = document.createElement('div');

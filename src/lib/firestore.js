@@ -1,12 +1,15 @@
 import { getFirestore, collection, addDoc, doc, onSnapshot, query, deleteDoc } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-firestore.js";
 import { app } from '../lib/config.js'
-import { user } from '../lib/auth.js'
+import { auth } from '../lib/auth.js'
 
 const db = getFirestore(app);
 
-export const savePost = (mail, post)=>{
+export const savePost = (post)=>{
+  const user = auth.currentUser;
+  console.log(user);
+
     addDoc(collection(db, 'posts'), {
-      mail,
+      mail: user.email,
       post
     });
     }

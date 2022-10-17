@@ -1,7 +1,7 @@
 import { onNavigate } from '../main.js';
 import { existingUserAccess } from '../lib/auth.js';
 import { getPost, savePost, deletePost } from '../lib/firestore.js';
-import { auth, user } from '../lib/auth.js'
+import { auth, user, onAuthStateChanged } from '../lib/auth.js'
 
 
 export function Home() {
@@ -51,6 +51,7 @@ export function Home() {
         await deletePost(doc.id);
         location.reload()
       })
+
       //Appending post content to post container box
       div.append(userEmail, postContent, deleteButton)
       //Appending post container box to post display area
@@ -59,12 +60,12 @@ export function Home() {
     });
   })
 
-  submitButton.addEventListener('click', async () => {
+  submitButton.addEventListener('click', async (e) => {
     //e.preventDefault();
-    const mail = 'user.mail';
+    //const mail = 'user.mail';
     const post = postTextBox.value;
 
-    await savePost(mail, post);
+    await savePost(post);
     postsDisplay.innerHTML = ''
     postTextBox.value = '';
   });
