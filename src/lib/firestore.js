@@ -10,7 +10,8 @@ export const savePost = (post)=>{
 
     addDoc(collection(db, 'posts'), {
       mail: user.email,
-      post
+      post,
+      //likesNumber
     });
     }
 

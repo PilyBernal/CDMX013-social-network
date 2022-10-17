@@ -42,18 +42,38 @@ export function Home() {
       //Post text content
       const postContent = document.createElement('h3')
       postContent.textContent = post.post
+
+      //Icons container box
+      const iconsContent = document.createElement('div');
+      iconsContent.classList.add('iconsContent');
+
       //Button for deleting post
       const deleteButton = document.createElement('button')
       deleteButton.classList.add('deleteButton')
       deleteButton.textContent = '   '
+      //Button to like the post
+      const postLike = document.createElement('button');
+      postLike.classList.add('postLike');
+      let likesNumber = 0
+      postLike.textContent = likesNumber;
+
       //Event listener for deleting post
       deleteButton.addEventListener('click', async () => {
-        await deletePost(doc.id);
-        location.reload()
+         await deletePost(doc.id);
+         location.reload()
       })
 
+      //Event listener to like the post
+      /*postLike.addEventListener('click', async (e) => {
+        await likesNumber(doc.id);
+        likesNumber = likesNumber + 1;
+        location.reload()
+      })*/
+
+      iconsContent.append(postLike, deleteButton);
+
       //Appending post content to post container box
-      div.append(userEmail, postContent, deleteButton)
+      div.append(userEmail, postContent, iconsContent)
       //Appending post container box to post display area
       postsDisplay.append(div)
 
