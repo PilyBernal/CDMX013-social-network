@@ -1,6 +1,6 @@
 import { onNavigate } from '../main.js';
 import { existingUserAccess } from '../lib/auth.js';
-import { getPost, savePost, deletePost } from '../lib/firestore.js';
+import { getPost, savePost, deletePost, addLikes, likesNumber } from '../lib/firestore.js';
 import { auth, user, onAuthStateChanged } from '../lib/auth.js'
 
 
@@ -50,17 +50,16 @@ export function Home() {
       //Button for deleting post
       const deleteButton = document.createElement('button')
       deleteButton.classList.add('deleteButton')
-      deleteButton.textContent = '   '
+      //deleteButton.textContent = '   '
 
       //Button to like the post
       const postLike = document.createElement('button');
       postLike.classList.add('postLike');
-      let likesNumber = 0
-      postLike.textContent = likesNumber;
+      postLike.textContent = `${post.likesNumber}`;
 
       const editButton = document.createElement('button');
       editButton.classList.add('editButton');
-      editButton.textContent = '   ';
+      //editButton.textContent = '   ';
 
 
       //Event listener for deleting post
@@ -70,11 +69,11 @@ export function Home() {
       })
 
       //Event listener to like the post
-      /*postLike.addEventListener('click', async (e) => {
-        await likesNumber(doc.id);
-        likesNumber = likesNumber + 1;
-        location.reload()
-      })*/
+      postLike.addEventListener('click', () => {
+        postsDisplay.innerHTML = '';
+        addLikes(doc.id, post.likesNumber+1);
+        postLike.textContent = `${post.likesNumber}`;
+      })
 
       iconsContent.append(postLike, editButton, deleteButton);
 
@@ -86,12 +85,12 @@ export function Home() {
     });
   })
 
-  submitButton.addEventListener('click', async (e) => {
+  submitButton.addEventListener('click', (e) => {
     //e.preventDefault();
     //const mail = 'user.mail';
     const post = postTextBox.value;
 
-    await savePost(post);
+    savePost(post);
     postsDisplay.innerHTML = ''
     postTextBox.value = '';
   });
@@ -100,6 +99,7 @@ export function Home() {
   homeContent.append(lotoBoxContainer, postsDisplay);
 
   return homeContent;
-}
+  }
 
-//revisar imports en index.js
+
+/*revisar imports en index.js*/
