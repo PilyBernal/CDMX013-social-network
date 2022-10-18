@@ -17,3 +17,4 @@ export const onAuthStateChanged = (auth, user) => {
     console.log('No user is signed in');
   }
 };
+
