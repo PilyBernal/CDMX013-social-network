@@ -6,5 +6,15 @@ import { signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9
 export const auth = getAuth();
 export const newUser = (email, password) => createUserWithEmailAndPassword(auth, email, password);
 
-export const existingUserAccess = (email, password) => signInWithEmailAndPassword(auth, email, password)
+export const user = auth.currentUser;
+
+export const existingUserAccess = (mail, password) => signInWithEmailAndPassword(auth, mail, password)
+
+export const onAuthStateChanged = (auth, user) => {
+  if (user.email) {
+    const mail = user.email;
+  } else {
+    console.log('No user is signed in');
+  }
+};
 

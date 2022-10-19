@@ -14,8 +14,10 @@ export const Login = () =>{
     inputPass.placeholder = 'Password'; 
     inputPass.type = 'password'; 
 
-    buttonLogin.textContent = 'Log in';    
+    buttonLogin.textContent = 'Log in';  
+    buttonLogin.classList.add('button');  
     buttonBack.textContent = 'Back to start';
+    buttonBack.classList.add('button');
 
     buttonBack.addEventListener('click', () => {
         onNavigate('/');
@@ -25,12 +27,6 @@ export const Login = () =>{
         existingUserAccess(inputEmail.value, inputPass.value)
           .then((userCredential) => {
             onNavigate('/home');
-            // Signed in
-            const user = userCredential.user;
-            // ...
-            console.log(inputEmail.value);
-            console.log(inputPass.value);
-            console.log(userCredential.user);
           })
     
           .catch((error) => {
