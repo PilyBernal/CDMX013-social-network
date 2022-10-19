@@ -7,7 +7,7 @@ const db = getFirestore(app);
 export const savePost = (post) => {
   const user = auth.currentUser;
   console.log(user);
-
+  
   addDoc(collection(db, 'posts'), {
     mail: user.email,
     post,

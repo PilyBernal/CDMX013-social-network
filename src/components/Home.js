@@ -60,12 +60,39 @@ export function Home() {
       const editButton = document.createElement('button');
       editButton.classList.add('editButton');
       //editButton.textContent = '   ';
+      editButton.addEventListener('click', (e) => {
+        console.log(doc.id);
+      })
 
 
       //Event listener for deleting post
-      deleteButton.addEventListener('click', async () => {
-         await deletePost(doc.id);
-         location.reload()
+      deleteButton.addEventListener('click', () => {
+
+        const confirmation = document.createElement('div');
+        confirmation.classList.add('confirmation');
+
+        let postDeleteDialog = document.createElement('dialog');
+
+        function removeDialog(){
+          let homeContent = document.getElementsByClassName('homeContent');
+          document.homeContent.removeChild(confirmation);
+          return removeDialog;
+        }
+
+        removeDialog();
+
+        fetch (doc.id)
+        .then(function(removeDialog){
+          return 'Do you want to delete';
+        })
+        .then(function(texto){
+          document.getElementsByClassName('confirmation').innerHTML = texto;
+        })
+
+        confirmation.appendChild(removeDialog);
+
+        postsDisplay.innerHTML = '';
+        deletePost(doc.id);
       })
 
       //Event listener to like the post
