@@ -50,6 +50,23 @@ export function Home() {
       //Button for deleting post
       const deleteButton = document.createElement('button')
       deleteButton.classList.add('deleteButton')
+      //Dialog for post deletion confirmation
+      const confirmPostDeletion = document.createElement('div')
+      confirmPostDeletion.classList.add('confirmPostDeletion')
+
+      const deleteDialog = document.createElement('div')
+      deleteDialog.classList.add('deleteDialog')
+      deleteDialog.textContent = 'Are you sure you want to delete this post?'
+      const deleteConfirmButton = document.createElement('button')
+      deleteConfirmButton.textContent = 'Confirm'
+      deleteConfirmButton.classList.add('confirmationButton')
+      const deleteReturnButton = document.createElement('button')
+      deleteReturnButton.textContent = 'Go back'
+      deleteReturnButton.classList.add('confirmationButton')
+      
+      deleteDialog.append(deleteConfirmButton, deleteReturnButton)
+      confirmPostDeletion.append(deleteDialog)
+
       //deleteButton.textContent = '   '
 
       //Button to like the post
@@ -63,15 +80,22 @@ export function Home() {
 
 
       //Event listener for deleting post
-      deleteButton.addEventListener('click', async () => {
-         await deletePost(doc.id);
-         location.reload()
-      })
+      deleteButton.addEventListener('click', () => {
+        div.append(confirmPostDeletion)
+        deleteReturnButton.addEventListener('click', () => {
+          div.removeChild(confirmPostDeletion)
+        })
+        deleteConfirmButton.addEventListener('click', () => {
+          div.removeChild(confirmPostDeletion)
+          postsDisplay.innerHTML = '';
+          deletePost(doc.id);
+        })
+        })
 
       //Event listener to like the post
       postLike.addEventListener('click', () => {
         postsDisplay.innerHTML = '';
-        addLikes(doc.id, post.likesNumber+1);
+        addLikes(doc.id, post.likesNumber + 1);
         postLike.textContent = `${post.likesNumber}`;
       })
 
@@ -99,7 +123,7 @@ export function Home() {
   homeContent.append(lotoBoxContainer, postsDisplay);
 
   return homeContent;
-  }
+}
 
 
 /*revisar imports en index.js*/
