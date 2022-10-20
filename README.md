@@ -46,6 +46,7 @@ profundizar y/o ejercitar más sobre los objetivos de aprendizaje del proyecto.
 * Permite crear posts con imágenes.
 * Permite buscar usuarios, agregar y eliminar "amigos".
 * Permite definir la privacidad de los _posts_ (público o solamente para amigos).
+
 * Permite ver su muro de cualquier usuario "no-amigo" (solamente los
   posts _públicos_).
 * Permite comentar o responder una publicación.
