@@ -33,6 +33,22 @@ en la que podamos **leer y escribir datos**.
 
 ## 3. Diseño del proyecto
 
+#### Primer propuesta para iniciar a trabajar en el diseño
+
+![Primer_propuesta](/src/Images/Primer_propuesta.png)
+
+#### Opciones de color para el nombre de la Red Social
+
+![Opciones_nombre](/src/Images/Opciones_nombre.png)
+
+#### Prototipo de baja fidelidad
+
+![Prototipo_baja](/src/Images/Prototipo_baja.png)
+
+#### Prototipo alta fidelidad
+
+![Prototipo_alta](/src/Images/Prototipo_alta.png)
+
 ## 4. Criteriosde aceptación mínimos del proyecto
 
 ### 4.1 Historias de usuario
