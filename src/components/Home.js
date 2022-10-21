@@ -74,9 +74,9 @@ export function Home() {
       postLike.classList.add('postLike');
       postLike.textContent = `${post.likesNumber}`;
 
-      const editButton = document.createElement('button');
+      /*const editButton = document.createElement('button');
       editButton.classList.add('editButton');
-      //editButton.textContent = '   ';
+      //editButton.textContent = '   ';*/
 
 
       //Event listener for deleting post
@@ -99,7 +99,7 @@ export function Home() {
         postLike.textContent = `${post.likesNumber}`;
       })
 
-      iconsContent.append(postLike, editButton, deleteButton);
+      iconsContent.append(postLike, /*editButton*/ deleteButton);
 
       //Appending post content to post container box
       div.append(userEmail, postContent, iconsContent)
