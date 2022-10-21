@@ -29,7 +29,15 @@ más comentado.
 El objetivo principal de aprendizaje de este proyecto es construir una
 [Single-page Application (SPA)](https://es.wikipedia.org/wiki/Single-page_application)
 [_responsive_](https://curriculum.laboratoria.la/es/topics/css/02-responsive) (con más de una vista / página)
-en la que podamos **leer y escribir datos**.
+en la que podamos **leer y escribir datos**. 
+Loto está dirigida al público aficionado de las plantas y sus cuidados, pensando en crear una comunidad en la cual se puedan compartir tips y responderse 
+dudas y preguntas respecto al cuidado, reproducción, adquisición y mantenimiento de cualquier tipo de planta.
+
+Como aficionadas de las plantas, muchas personas eventualmente se hallan ante una desmejoría en alguno de los ejemplares de los que están cuidando, 
+y en muchas ocasiones, es difícil encontrar información al respecto en medios tradicionales, y a veces incluso en los medios digitales, además de que
+muchas veces estos casos requieren de ser evaluados con alguien con mayor experiencia empírica, así que Loto abre el canal de comunicación entre personas
+que podrían requerir de ayuda para dar una mejor vida a las plantas de las que cuida, y aquellas que son capaces de extender dicha ayuda, y así ir entretejiendo
+el conocimiento de distintas personas en un recurso fácilmente accesible mediante el empleo de una sencilla aplicación web que cuenta con un diseño y funcionalidad que vuelven su uso muy intuitivo.
 
 ## 3. Diseño del proyecto
 
