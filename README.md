@@ -33,10 +33,31 @@ en la que podamos **leer y escribir datos**.
 
 ## 3. Diseño del proyecto
 
+#### Primer propuesta para iniciar a trabajar en el diseño
+
+![Primer_propuesta](/src/Images/Primer_propuesta.png)
+
+#### Opciones de color para el nombre de la Red Social
+
+![Opciones_nombre](/src/Images/Opciones_nombre.png)
+
+#### Prototipo de baja fidelidad
+
+![Prototipo_baja](/src/Images/Prototipo_baja.png)
+
+#### Prototipo alta fidelidad
+
+![Prototipo_alta](/src/Images/Prototipo_alta.png)
+
 ## 4. Criteriosde aceptación mínimos del proyecto
 
-### 4.1 Historias de usuario
-
+### 4.1 Historias de usuario.
+La primera historia de usuario la creamos pensando que pudiera registarse usando email y contraseña. "Yo como usuario quiero poder crear una cuenta con mi correo y contraseña para poder ingresar a la red social LOTO" usamos la base de datos de Firebase y pusimos botones para poder acceder a dicha acción.asi mismo limitamos la contrasela a número de caracteres y es necesario usar caracteres especiales, hay un aviso en la parte del registro donde el usuario puede ver dicho requerimiento.
+La segunda historia de usuario la pensamos dando la opción de poder entrar como usuario ya registrado, y hacer el login con el correo y contraseña de no coincidir la misma aplicación no deja que el usuario ingrese al home de LOTO
+Nuestra siguiente Historia de usuario consistión en que poder generar los post , creamos un div para cada uno usando el forEach y así se generarían los divs de cada uno.
+Por ultimo trabajamos la Historia de usuario pra poder dar like y borrar los post, esta en proceso hacer que se individualice a cada usuario.
+Para que nuestro usurio pudiera crear post creamos la tercera historia de usuario donde el usuario
+ ent
 ## 5. Hacker edition
 
 Las secciones llamadas _Hacker Edition_ son **opcionales**. Si **terminaste**
